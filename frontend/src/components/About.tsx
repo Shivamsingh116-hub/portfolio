@@ -52,7 +52,7 @@ const About = () => {
         </motion.p>
         <motion.p
           variants={cardChild}
-          className='mb-4'>
+          className='mb-4 hidden md:block'>
           Outside of coding, you’ll usually find me exploring new tech stacks, sharpening
           problem-solving skills, or diving into creative projects that challenge me to think
           differently.

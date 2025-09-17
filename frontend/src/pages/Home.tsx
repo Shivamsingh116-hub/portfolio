@@ -4,6 +4,10 @@ import Projects from '../components/Projects'
 import Education from '../components/Education'
 import { AnimatePresence, motion } from 'framer-motion'
 import '../style/pages/Home.scss'
+import whatsAppImg from '/images/whatsapp.png'
+import githubImg from '/images/github.webp'
+import instagramImg from '/images/instagram.webp'
+import linkedinImg from '/images/linkedin.webp'
 const container = {
   hidden: { opacity: 0, y: -20 },
   show: {
@@ -38,6 +42,10 @@ const Home = () => {
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" }
   ]
+  const iconArray = [{ icon: githubImg, path: 'https://github.com/Shivamsingh116-hub' },
+  { icon: instagramImg, path: 'https://www.instagram.com/shivam_0.0.4?igsh=MXBnYTRtZWg3ZTNwNQ==' },
+  { icon: linkedinImg, path: 'http://www.linkedin.com/in/shivam-singh-3930492b4' },
+  { icon: whatsAppImg, path: 'https://wa.me/+919996761239' }]
   return (
     <motion.div
       variants={container}
@@ -96,10 +104,16 @@ const Home = () => {
             <motion.ul
               variants={cardChild}
               className='flex items-center mt-8 ml-1' aria-label='Social-media'>
-              <li className='mr-5 shrink-0 text-xs'>Ab</li>
-              <li className='mr-5 shrink-0 text-xs'>Ex</li>
-              <li className='mr-5 shrink-0 text-xs'>Pr</li>
-              <li className='mr-5 shrink-0 text-xs'>Co</li>
+              {iconArray.map((item, i) =>
+                <motion.li
+                  key={`icon-${i}`}
+                  className='mr-2 max-w-8 max-h-8 shrink-0 text-xs'>
+                  <motion.a href={item.path} target='_blank'>
+                    <motion.img
+                      src={item.icon} alt='icon*' />
+                  </motion.a>
+                </motion.li>
+              )}
             </motion.ul>
           </motion.div>
           <motion.div
@@ -111,7 +125,7 @@ const Home = () => {
             <motion.section
               variants={cardChild}
               id='about'
-              className='lg:mb-44  scroll-mt-24 '
+              className='lg:mb-44 mb:12  scroll-mt-24 '
             >
               <About />
             </motion.section>
