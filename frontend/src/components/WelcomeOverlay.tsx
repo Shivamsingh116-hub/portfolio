@@ -50,6 +50,12 @@ const buttonChild = {
 const WelcomeOverlay: React.FC<WelcomeOverlayProps> = ({ onFinish }) => {
   const [canExit, setCanExit] = useState(false)
 
+  useEffect(() => {
+    let metaTheme = document.querySelector('meta[name=theme-color]')
+    if (metaTheme?.getAttribute('content') !== '#ae8fdb') {
+      metaTheme?.setAttribute('content', '#ae8fdbs')
+    }
+  }, [])
   // ====================
   // Lifecycle: handle auto-dismiss and enabling exit button
   // ====================

@@ -52,8 +52,8 @@ const Education = () => {
 
   return (
     <div
-      className="education-container w-full max-h-full h-[75vh]
-      box-border flex flex-col">
+      className="education-container w-full max-h-full h-[80vh]
+      box-border flex justify-between flex-col">
       <motion.div
         variants={cardContainer}
         initial='hidden'
@@ -93,9 +93,9 @@ const Education = () => {
           className="lg:hidden flex items-center justify-center"
         >
           <AnimatePresence mode='wait'>
-            <motion.div className='w-48 h-48 flex items-center justify-center'>
+            <motion.div className='w-52 h-52 flex items-center justify-center'>
               <motion.img
-                className='object-contain w-full h-full drop-shadow-[0_5px_5px_rgba(80,70,40,0.4)]'
+                className='object-contain w-full h-full  drop-shadow-[0_5px_5px_rgba(80,70,40,0.4)]'
                 key={`skill${startIndex}`}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}

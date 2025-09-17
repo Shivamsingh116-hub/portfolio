@@ -20,7 +20,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--default-bg);
 }

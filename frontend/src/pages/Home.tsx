@@ -125,14 +125,14 @@ const Home = () => {
             <motion.section
               variants={cardChild}
               id='about'
-              className='lg:mb-44 mb:12  scroll-mt-24 '
+              className='lg:mb-44 mb-16  scroll-mt-24 '
             >
               <About />
             </motion.section>
             <motion.section
               variants={cardChild}
               id='education'
-              className='lg:mb-24 scroll-mt-24'
+              className='lg:mb-24 mb-20 scroll-mt-24'
             >
               <Education />
             </motion.section>

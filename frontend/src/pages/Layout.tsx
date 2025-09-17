@@ -15,6 +15,7 @@ const Layout: React.FC = () => {
   const handleWelcomeFinish = () => {
     sessionStorage.setItem('welcome_shown', 'true')
     setShowWelcome(false)
+    document.querySelector('meta[name=theme-color]')?.setAttribute('content','--default-bg')
   }
   return (
 
